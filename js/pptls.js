@@ -4,12 +4,15 @@ function shuffle(min, max)
     return numero;
 }
 
+function winner()
+{
+
 var opciones = ["piedra", "papel", "tijera", "lagarto", "spock"];
 
 var opcionMaquina = shuffle(0,4);
+var opcionUsuario = parseInt(document.getElementById('player').innerHTML);
 
-opcionUsuario = prompt("Elige entre:\nPiedra: 0\nPapel: 1\nTijera: 2\nLagarto: 3\nSpok: 4", 0);
-
+alert(typeof(opcionUsuario));
 if(opcionUsuario >-1 && opcionUsuario <5)
         {
             alert("Tu tienes " + opciones[opcionUsuario]);
@@ -23,7 +26,8 @@ alert ("Sheldon usa " + opciones[opcionMaquina]);
 
 if(opcionUsuario == opcionMaquina)
 {
-    alert("Tenemos un empate!");
+    //alert("Tenemos un empate!");
+    document.getElementById('ganador').innerHTML="Tenemos un empate!";
 }
 else if(opciones[opcionUsuario] == 'piedra' && opciones[opcionMaquina] == 'spock' ||
                 opciones[opcionUsuario] == 'piedra' && opciones[opcionMaquina] == 'papel' ||
@@ -36,7 +40,7 @@ else if(opciones[opcionUsuario] == 'piedra' && opciones[opcionMaquina] == 'spock
                 opciones[opcionUsuario] == 'spock' &&  opciones[opcionMaquina] == 'lagarto' ||
                 opciones[opcionUsuario] == 'spock' &&  opciones[opcionMaquina] == 'papel')
     {
-        alert("Sheldon te ha ganado de nuevo!");
+        //alert("Sheldon te ha ganado de nuevo!");
     }
     else if (opciones[opcionUsuario] == 'piedra' && opciones[opcionMaquina] == 'lagarto' ||
             opciones[opcionUsuario] == 'piedra' && opciones[opcionMaquina] == 'tijera' ||
@@ -49,9 +53,10 @@ else if(opciones[opcionUsuario] == 'piedra' && opciones[opcionMaquina] == 'spock
             opciones[opcionUsuario] == 'spock' &&  opciones[opcionMaquina] == 'tijera' ||
             opciones[opcionUsuario] == 'spock' &&  opciones[opcionMaquina] == 'piedra')
     {
-        alert("Le has ganado a Sheldon!");
+        //alert("Le has ganado a Sheldon!");
     }
     else
     {
-        alert("Al parecer no elegiste ninguna opción disponible, que te parece si vuelves a intentarlo\nAtt. Sheldon");
+        //alert("Al parecer no elegiste ninguna opción disponible, que te parece si vuelves a intentarlo\nAtt. Sheldon");
     }
+}
