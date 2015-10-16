@@ -8,12 +8,15 @@ function winner()
 {
 
 var opciones = ["piedra", "papel", "tijera", "lagarto", "spock"];
+var opcionUsuario = 0;
+
+alert(typeof(opcionUsuario));
 
 var opcionMaquina = shuffle(0,4);
-var opcionUsuario = document.getElementById('player').value;
+var opcionUsuario = parseInt(document.getElementById('player').innerHTML);
 
-alert(opcionUsuario);
-if(opcionUsuario >=0 && opcionUsuario <5)
+alert(typeof(opcionUsuario));
+if(opcionUsuario >=1 && opcionUsuario <5)
         {
             alert("Tu tienes " + opciones[opcionUsuario]);
         }
