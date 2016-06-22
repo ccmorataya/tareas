@@ -40,7 +40,7 @@ function paso() {
 	console.log(counter);
 
 	if (counter == 11111) {
-		alert("Has ganado");
+		alert("Congratulations!\nHas ganado");
 		location.reload();
 		document.getElementById('counter').value = "";
 	}
